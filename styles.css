@@ -1,6 +1,7 @@
 body {
-    background-color: #f1edee;
+    background-color: #0b0c10;
     font-family: 'Roboto Condensed', sans-serif;
+    color: #e4dddd;
 }
 
 #wrapper {
@@ -10,35 +11,36 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
     grid-template-areas: 
-        'header'
+        'head'
         'bio'
         'about'
         'projects';
+    
 }
 
 .border {
     margin: 0.2em;
     position: relative;
-    background: linear-gradient(to right, #3D5467, #f1edee);
-    padding: 1px;
-    box-shadow: 3px 5px 4px #b2baca;
+    background: linear-gradient(45deg, #66fcf1, #1f2833, #1f2833);
+    padding: 0.01em;
+    box-shadow: 3px 5px 4px #030305;
     border-radius: 8px;
 }
 
 .border>* {
     margin: 0.2em;
     padding: 1em;
-
-    background-color: #9cb8b6;
+    justify-self: center;
+    
+    background-color: #1f2833;
     border-radius: 5px;
-
-    justify-content: center;
-    align-items: center;
 }
 
 #header {
-    grid-area: header;
-    text-align: center;
+    grid-area: head;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-self: start;
 }
 
 #bio {
@@ -59,13 +61,24 @@ body {
 h2 {
     font-family: 'Kanit', sans-serif;
     margin: 0.3em;
-    background: -webkit-linear-gradient(#47c2c2, #121329);
+    background: -webkit-linear-gradient(#66fcf1, #45a29e);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #c5c6c7;
+}
+
 /* Images */
+#li-icon {
+    height: 16px;
+    padding-right: 2em;
+}
+
 #idphoto {
     float: left;
     border-style: solid;
