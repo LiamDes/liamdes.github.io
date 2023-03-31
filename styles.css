@@ -1,0 +1,46 @@
+body {
+    background-color: #fff;
+}
+
+#wrapper {
+    margin: 1em 0.5em;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+        'header'
+        'bio'
+        'about'
+        'projects';
+}
+
+#wrapper>* {
+    margin: 0.2em;
+
+    background-color: #9cb8b6;
+    border-radius: 5px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    grid-area: header;
+
+    text-align: center;
+}
+
+#bio {
+    grid-area: bio;
+
+    text-align: right;
+}
+
+#about {
+    grid-area: about;
+}
+
+#projects {
+    grid-area: projects;
+}
