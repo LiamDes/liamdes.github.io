@@ -1,0 +1,75 @@
+body {
+    background-color: #f1edee;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#wrapper {
+    margin: 1em 0.5em;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+        'header'
+        'bio'
+        'about'
+        'projects';
+}
+
+.border {
+    margin: 0.2em;
+    position: relative;
+    background: linear-gradient(to right, #3D5467, #f1edee);
+    padding: 1px;
+    box-shadow: 3px 5px 4px #b2baca;
+    border-radius: 8px;
+}
+
+.border>* {
+    margin: 0.2em;
+    padding: 1em;
+
+    background-color: #9cb8b6;
+    border-radius: 5px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    grid-area: header;
+    text-align: center;
+}
+
+#bio {
+    grid-area: bio;
+
+    text-align: right;
+}
+
+#about {
+    grid-area: about;
+}
+
+#projects {
+    grid-area: projects;
+}
+
+/* Text */
+h2 {
+    font-family: 'Kanit', sans-serif;
+    margin: 0.3em;
+    background: -webkit-linear-gradient(#47c2c2, #121329);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Images */
+#idphoto {
+    float: left;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 3px;
+    border-color: #3D5467;
+}
