@@ -2,6 +2,11 @@ body {
     background-color: #0b0c10;
     font-family: 'Roboto Condensed', sans-serif;
     color: #e4dddd;
+
+    /* dot pattern from url('https://www.magicpattern.design/tools/css-backgrounds') */
+    background-image:  radial-gradient(#1f2833 2px, transparent 2px), radial-gradient(#1f2833 2px, #0b0c10 2px);
+    background-size: 80px 80px;
+    background-position: 0 0,40px 40px;
 }
 
 #wrapper {
@@ -13,7 +18,7 @@ body {
     grid-template-areas: 
         'head'
         'bio'
-        'about'
+        'skills'
         'projects';
     
 }
@@ -26,11 +31,6 @@ body {
     box-shadow: 3px 5px 4px #030305;
     border-radius: 8px;
 }
-
-/* #for-bio {
-    width: fit-content;
-    justify-self: right;
-} */
 
 .border>* {
     margin: 0.2em;
@@ -47,16 +47,19 @@ body {
     justify-self: start;
 }
 
-#bio {
+#for-bio {
     grid-area: bio;
+}
+
+#bio {
     text-align: right;
 }
 
-#about {
-    grid-area: about;
+#for-skills {
+    grid-area: skills;
 }
 
-#projects {
+#for-projects {
     grid-area: projects;
 }
 
@@ -84,6 +87,9 @@ a {
     color: #c5c6c7;
 }
 
+ul {
+    column-count: 3;
+}
 
 /* Images */
 .icons {
@@ -101,4 +107,62 @@ a {
 
 .placeholder {
     width: 200px;
+}
+
+/* Tablet Display */
+@media screen and (min-width: 680px) {
+
+    #wrapper>* {
+        margin: 0.5em;
+    }
+
+    #for-bio {
+        width: fit-content;
+        justify-self: right;
+        margin-right: 2.5em;
+    }
+
+    #for-skills {
+        margin-right: 4em;
+    }
+
+    #for-projects {
+        margin-left: 2em;
+    }
+
+    #header {
+        margin-left: 3em;
+    }
+}
+
+/* Desktop Display */
+@media screen and (min-width: 1024px) {
+
+    #wrapper {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto 95%;
+        grid-template-areas: 
+            'head bio'
+            'skills bio'
+            'projects projects';
+    }
+
+    #wrapper>* {
+        height: fit-content;
+    }
+
+    #for-bio {
+        justify-self: center;
+    }
+
+    #for-skills {
+        margin: 1em;
+        justify-self: center;
+        align-self: end;
+    }
+
+    #for-projects {
+        width: 90vw;
+    }
+
 }
