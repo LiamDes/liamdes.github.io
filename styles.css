@@ -61,6 +61,7 @@ body {
 
 .tab:hover {
     background-color: #45a29e;
+    box-shadow: 0px 0px 10px #66fcf1;
 }
 
 #for-bio {
@@ -117,6 +118,10 @@ ul {
     column-count: 3;
 }
 
+.fa-li:hover {
+    color: #66fcf1;
+}
+
 /* Images */
 .icons {
     padding-right: 2em;
@@ -131,8 +136,18 @@ ul {
     border-color: #3D5467;
 }
 
+#idphoto:hover {
+    transition: 0.5s;
+    box-shadow: 0px 0px 10px #66fcf1;
+    border-color: #66fcf1;
+}
+
 .placeholder {
     width: 200px;
+}
+
+.project-display:hover {
+    transform: scale(105%);
 }
 
 /* Tablet Display */
@@ -144,11 +159,6 @@ ul {
         66% {transform: rotate(3deg);}
         100% {transform: rotate(0);}
     }
-
-    /* h2 {
-
-        /* animation-iteration-count:infinite; */
-    /* } */ 
 
     #wrapper>* {
         margin: 0.5em;
