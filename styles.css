@@ -47,6 +47,13 @@ body {
     justify-self: start;
 }
 
+.tab {
+    transition: 0.5s;
+}
+.tab:hover {
+    background-color: #45a29e;
+}
+
 #for-bio {
     grid-area: bio;
 }
@@ -85,6 +92,14 @@ a {
     text-decoration: none;
     font-weight: 600;
     color: #c5c6c7;
+    transition: 0.5s;
+}
+
+/* .tab>a {
+    
+} */
+.tab:hover>a {
+    color: #0b0c10;
 }
 
 ul {
