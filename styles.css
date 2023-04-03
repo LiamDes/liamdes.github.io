@@ -1,3 +1,11 @@
+@keyframes header-text-move {
+    0% {transform: translateY(-45px);}
+    15% {transform: translateY(5px);}
+    35% {transform: translateY(-10px);}
+    50% {transform: translateY(0);}
+    100% {transform: translateY(0);}
+}
+
 body {
     background-color: #0b0c10;
     font-family: 'Roboto Condensed', sans-serif;
@@ -30,6 +38,9 @@ body {
     padding: 0.01em;
     box-shadow: 3px 5px 4px #030305;
     border-radius: 8px;
+
+    transition:all 0.3s ease-out; 
+    -webkit-transition:all 0.3s ease-out;
 }
 
 .border>* {
@@ -45,6 +56,15 @@ body {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-self: start;
+}
+
+.tab {
+    transition: 0.5s;
+}
+
+.tab:hover {
+    background-color: #45a29e;
+    box-shadow: 0px 0px 10px #66fcf1;
 }
 
 #for-bio {
@@ -70,6 +90,19 @@ body {
     justify-content: space-around;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+  }
+::-webkit-scrollbar-track {
+    background: #0b0c10;
+  }
+::-webkit-scrollbar-thumb {
+    background: #1f2833;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-corner {
+    background: #0b0c10;
+  }
 
 /* Text */
 h2 {
@@ -79,16 +112,31 @@ h2 {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation-name: header-text-move;
+    animation-duration: 1.2s;
 }
 
 a {
     text-decoration: none;
     font-weight: 600;
     color: #c5c6c7;
+    transition: 0.5s;
+}
+
+a>i:hover {
+    color: #45a29e;
+}
+
+.tab:hover>a {
+    color: #0b0c10;
 }
 
 ul {
     column-count: 3;
+}
+
+.fa-li:hover {
+    color: #66fcf1;
 }
 
 /* Images */
@@ -105,12 +153,29 @@ ul {
     border-color: #3D5467;
 }
 
+#idphoto:hover {
+    transition: 0.5s;
+    box-shadow: 0px 0px 10px #66fcf1;
+    border-color: #66fcf1;
+}
+
 .placeholder {
     width: 200px;
 }
 
+.project-display:hover {
+    transform: scale(105%);
+}
+
 /* Tablet Display */
 @media screen and (min-width: 680px) {
+
+    @keyframes menu-move {
+        0% {transform: rotate(0);}
+        33% {transform: rotate(-3deg);}
+        66% {transform: rotate(3deg);}
+        100% {transform: rotate(0);}
+    }
 
     #wrapper>* {
         margin: 0.5em;
@@ -132,6 +197,12 @@ ul {
 
     #header {
         margin-left: 3em;
+    }
+
+    #header>.border:hover {
+        animation-name: menu-move;
+        animation-duration: 2s;
+        animation-iteration-count:infinite;
     }
 }
 
