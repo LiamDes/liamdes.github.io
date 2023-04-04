@@ -100,10 +100,17 @@ body {
     background: #1f2833;
     border-radius: 5px;
   }
-  ::-webkit-scrollbar-corner {
+::-webkit-scrollbar-corner {
     background: #0b0c10;
   }
 
+/* highlight */
+::selection {
+    background: #0b0c10; 
+  } 
+::-moz-selection {
+    background: #0b0c10;
+  }
 /* Text */
 h2 {
     font-family: 'Kanit', sans-serif;
