@@ -1,3 +1,7 @@
+:root {
+    overflow-x: hidden;
+}
+
 @keyframes header-text-move {
     0% {transform: translateY(-45px);}
     15% {transform: translateY(5px);}
@@ -170,8 +174,17 @@ ul {
     width: 200px;
 }
 
+.project-display {
+    height: 350px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 .project-display:hover {
     transform: scale(105%);
+    transition: all 0.2s;
 }
 
 /* Tablet Display */
@@ -244,3 +257,9 @@ ul {
     }
 
 }
+
+@media (prefers-reduced-motion) {
+    * {
+        transition: none;
+    }
+  }
